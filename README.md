@@ -86,3 +86,44 @@ inquiry_agent = ConversableAgent(
     llm_config=llm_config,
     system_message="You handle customer inquiries and classify them.",
 )
+```
+---
+## Outcome
+
+- The AI agents fully resolved the issue without needing human help.
+- The customer feedback was positive.
+- Escalation Agent confirmed that no escalation was necessary.
+- The case was marked as **successfully resolved**.
+
+---
+
+## Output (from terminal)
+
+```plaintext
+User (to Inquiry_Agent):
+My internet is not working, and I have already tried rebooting the router.
+
+Inquiry_Agent:
+Issue: Internet connection problem
+Next steps:
+1. Check if other devices are also unable to connect...
+...
+
+Response_Agent:
+Thank you for reaching out...
+Please try the following steps...
+
+Knowledge_Base_Agent:
+These steps match our help article...
+
+Troubleshooting_Agent:
+Is there anything else I can help you with?
+
+Feedback_Agent:
+The customer said the steps were clear and helpful.
+
+Escalation_Agent:
+No need for human help — issue resolved successfully.
+
+Inquiry_Agent:
+Classification: Successfully resolved issue
